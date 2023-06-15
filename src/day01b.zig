@@ -1,3 +1,4 @@
+//! This algorithm assumes that all elves are carrying a unique amount of calories.
 const std = @import("std");
 const TOP_N = 3;
 
