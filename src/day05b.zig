@@ -54,6 +54,13 @@ pub fn main() !void {
         try out.writeAll("\n");
     }
 
+    // reverse the crates
+    for (0..num_columns) |i| {
+        for (0..crate_table[i].items.len) |j| {
+            try crate_table[i].insert(j, crate_table[i].pop());
+        }
+    }
+
     output = try nextLine(file.reader(), &buffer);
     // read the moves
     while (output != null) : (output = try nextLine(file.reader(), &buffer)) {
@@ -67,10 +74,11 @@ pub fn main() !void {
                 pos += 1;
             }
         }
-        for (0..moves[0]) |i| {
-            try out.print("Move #{d} from column {d} to column {d}\n", .{ moves[0] - (i + 1), moves[1], moves[2] });
-            const crate = crate_table[moves[1] - 1].orderedRemove(moves[0] - (i + 1));
-            try crate_table[moves[2] - 1].insert(0, crate);
+        const remove_i = crate_table[moves[1] - 1].items.len - moves[0];
+        for (0..moves[0]) |_| {
+            try out.print("Move #{d} from column {d} to column {d}\n", .{ remove_i, moves[1], moves[2] });
+            const crate = crate_table[moves[1] - 1].orderedRemove(remove_i);
+            try crate_table[moves[2] - 1].append(crate);
         }
         try out.writeAll("\n");
     }
@@ -78,7 +86,7 @@ pub fn main() !void {
     try out.writeAll("Answer: ");
     for (0..num_columns) |i| {
         if (crate_table[i].items.len > 0) {
-            try out.writeByte(crate_table[i].items[0]);
+            try out.writeByte(crate_table[i].getLast());
         }
     }
     try out.writeAll("\n");
