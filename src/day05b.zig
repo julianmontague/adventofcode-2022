@@ -1,3 +1,7 @@
+//! Advent of Code 2022 Day 5 part 2 solution
+//! Copyright 2023 Julian Montague
+//! SPDX-License-Identifier: GPL-3.0-or-later
+
 const std = @import("std");
 const COLUMN_WIDTH = 4;
 const ROWS = 100;

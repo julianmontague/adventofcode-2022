@@ -1,3 +1,7 @@
+//! Advent of Code 2022 Day 3 part 1 solution
+//! Copyright 2023 Julian Montague
+//! SPDX-License-Identifier: GPL-3.0-or-later
+
 const std = @import("std");
 const LOWERCASE_PRIORITY_CONV: u8 = 96;
 const UPPERCASE_PRIORITY_CONV: u8 = 38;

@@ -1,3 +1,7 @@
+//! Advent of Code 2022 Day 4 part 1 solution
+//! Copyright 2023 Julian Montague
+//! SPDX-License-Identifier: GPL-3.0-or-later
+
 const std = @import("std");
 const hyphen = "-";
 const comma = ",";

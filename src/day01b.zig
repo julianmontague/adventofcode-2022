@@ -1,3 +1,6 @@
+//! Advent of Code 2022 Day 1 part 2 solution
+//! Copyright 2023 Julian Montague
+//! SPDX-License-Identifier: GPL-3.0-or-later
 //! This algorithm assumes that all elves are carrying a unique amount of calories.
 const std = @import("std");
 const TOP_N = 3;

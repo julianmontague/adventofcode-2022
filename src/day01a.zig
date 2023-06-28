@@ -1,3 +1,7 @@
+//! Advent of Code 2022 Day 1 part 1 solution
+//! Copyright 2023 Julian Montague
+//! SPDX-License-Identifier: GPL-3.0-or-later
+
 const std = @import("std");
 
 pub fn main() !void {

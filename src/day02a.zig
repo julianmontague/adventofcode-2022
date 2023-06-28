@@ -1,3 +1,7 @@
+//! Advent of Code 2022 Day 2 part 1 solution
+//! Copyright 2023 Julian Montague
+//! SPDX-License-Identifier: GPL-3.0-or-later
+
 const std = @import("std");
 const POINTS_LOSS = 0;
 const POINTS_DRAW = 3;

@@ -1,3 +1,7 @@
+//! Advent of Code 2022 Day 7 part 2 solution
+//! Copyright 2023 Julian Montague
+//! SPDX-License-Identifier: GPL-3.0-or-later
+
 const std = @import("std");
 const TOTAL_SPACE = 70000000;
 const AVAIL_SPACE = 40000000;
