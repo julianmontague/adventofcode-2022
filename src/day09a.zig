@@ -98,19 +98,9 @@ pub fn getTailMovement(head: Coords, tail: Coords) !Coords {
     const x_diff = try std.math.absInt(head.x - tail.x);
     const y_diff = try std.math.absInt(head.y - tail.y);
     var new_tail = Coords{ .x = tail.x, .y = tail.y };
-    if (x_diff < 2 and y_diff < 2) {
-        // do nothing; new_tail is already equal to tail
-    } else if (x_diff == 0) {
-        const direction = std.math.sign(head.y - tail.y);
-        new_tail.y += direction;
-    } else if (y_diff == 0) {
-        const direction = std.math.sign(head.x - tail.x);
-        new_tail.x += direction;
-    } else {
-        // TODO: test to see if only the following 5 lines are needed in this function
+    if (x_diff > 1 or y_diff > 1) {
         const x_dir = std.math.sign(head.x - tail.x);
         const y_dir = std.math.sign(head.y - tail.y);
-
         new_tail.x += x_dir;
         new_tail.y += y_dir;
     }
