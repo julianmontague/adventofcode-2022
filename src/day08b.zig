@@ -1,4 +1,4 @@
-//! Advent of Code 2022 Day 8 part 1 solution
+//! Advent of Code 2022 Day 8 part 2 solution
 //! Copyright 2023 Julian Montague
 //! SPDX-License-Identifier: GPL-3.0-or-later
 
