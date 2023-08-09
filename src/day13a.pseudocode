@@ -1,0 +1,20 @@
+compare(left_list, right_list):
+    for each item1 in left_list:
+        if right_list has item2:
+            if item1 is integer and item2 is integer:
+                if item1 < item2:
+                    return true;
+                else if item1 > item2:
+                    return false;
+            else if item1 is list and item2 is list:
+                compare(item1, item2);
+            else if item1 is integer:
+                new_list = list(item1);
+                compare(new_list, item2);
+            else if item2 is integer: (redundant condition)
+                new_list = list(item2);
+                compare(item1, new_list);
+        else:
+            return false;
+    if right_list still has items:
+        return true;
